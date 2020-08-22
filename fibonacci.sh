@@ -1,18 +1,15 @@
-echo enter the range of the series:--
-read n
-echo ------------------------------
+#write a program to display a fibonacii series
+echo -n "Enter terms : "
+read term
 a=0
 b=1
-i=2
-echo $a
-echo $b
-while test $i -lt $n
-do
-c=`expr $a + $b`
-echo $c
-a=$b
-b=$c
-i=`expr $i + 1`
-done
-
-
+c=1
+echo "the fibonaci number of $terms s are :"
+echo -n " $a $b "
+	for((i=2;i<=term;i++))
+	do
+		c=`expr $a + $b`
+		a=$b
+		b=$c
+		echo -n " $c "	
+	done
